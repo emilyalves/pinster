@@ -1,4 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,700);
+
 $body-bg: #34495e;
+$font-family-sans-serif: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $navbar-inverse-bg: #27ae60;
 $navbar-default-link-color: #f39c12;
 $brand-primary: #f39c12;
@@ -7,3 +10,7 @@ $jumbotron-heading-color: #34495e;
 $jumbotron-padding: 15px;
 
 @import 'bootstrap';
+
+.center {
+	text-align: center;
+}
