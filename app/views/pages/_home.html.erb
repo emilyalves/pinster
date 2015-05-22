@@ -1,14 +1,10 @@
-
 <div class="jumbotron center">
-	<% if user_signed_in? %>
-        <h2>Happy pinning!</h2>
-    <% else %>
-	 <p><h1>Welcome!</h1>
+	<h1>Welcome!</h1>
+	<p>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>	
 		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
  	 </p>
- <% end %>
 </div>
-	<small>
-		 One Month Rails Project by Emily Alves
-	</small>
+<small>
+	One Month Rails Project by Emily Alves
+</small>

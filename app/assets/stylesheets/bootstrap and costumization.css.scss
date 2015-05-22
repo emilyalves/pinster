@@ -11,6 +11,7 @@ $jumbotron-padding: 15px;
 $btn-warning-bg: #D4786A;
 $btn-default-color: #D4786A;
 
+@import "bootstrap-sprockets";
 @import 'bootstrap';
 
 .center {
