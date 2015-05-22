@@ -1,10 +1,9 @@
 
 <div class="jumbotron center">
-	<h1>Welcome to my app!</h1>
 	<% if user_signed_in? %>
-        # Hello
+        <h2>Happy pinning!</h2>
     <% else %>
-	 <p>
+	 <p><h1>Welcome!</h1>
 		<%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>	
 		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
  	 </p>

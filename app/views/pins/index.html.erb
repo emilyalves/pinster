@@ -1,3 +1,4 @@
+<% if user_signed_in? %>
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Pins</h1>
@@ -19,9 +20,8 @@
         <td><%= pin.description %></td>
         <td><%= pin.user.email if pin.user %></td>
         <td><%= link_to 'Show', pin %></td>
-         <% if pin.user == current_user %>
-          <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
-          <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_pin_path(pin) %></td>
+        <td><%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
        <% end %>
       </tr>
     <% end %>
@@ -31,4 +31,7 @@
 <br>
 <% if user_signed_in? %>
   <%= link_to 'New Pin', new_pin_path, class: "btn btn-default btn-lg" %>
+<% else %>
+<h2>You need to sign in to view your pins.<h2>
+<%= link_to "Sign in", new_user_session_path, class: "btn btn-primary btn-lg" %>
 <% end %>
